@@ -49,7 +49,6 @@ func main() {
 
 	gyro := l3gd20.New(bus, l3gd20.R2000DPS)
 	defer gyro.Close()
-
 	gyro.Start()
 
 	quit := make(chan os.Signal, 1)
