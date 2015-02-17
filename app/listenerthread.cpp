@@ -29,7 +29,7 @@ void ListenerThread::receiveMessage()
 {
     try {
         nnxx::socket s { nnxx::SP, nnxx::PAIR };
-        const char *addr = "tcp://192.168.2.1:40899";
+        const char *addr = "tcp://0.0.0.0:40899";
 
         s.bind(addr);
         s.send("START");
