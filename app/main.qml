@@ -31,9 +31,15 @@ Window {
                 anchors.centerIn: parent
                 width: parent.width*2; height: parent.height*2
                 source: camera
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: negativeEffect.visible = !negativeEffect.visible
+                }
             }
 
             LevelAdjust {
+                id: negativeEffect
                 anchors.fill: video
                 source: video
                 minimumOutput: "#00ffffff"
